@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+use_frameworks!
+
+target 'VanhiSwiftwb' do
+ pod "Alamofire"
+ pod "AFNetworking"
+ pod "SDWebImage"
+ pod "FMDB"
+ pod "SVProgressHUD"
+ pod "pop"  
+ pod "SnapKit"
+ pod "SwiftyJSON"
+ pod "MJExtension"
+
+end

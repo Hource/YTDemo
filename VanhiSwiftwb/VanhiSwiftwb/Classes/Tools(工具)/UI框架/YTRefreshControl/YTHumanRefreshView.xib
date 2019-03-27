@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="UT5-HJ-L9r" customClass="YTRefreshView" customModule="CustomRefresh" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refreshbg" translatesAutoresizingMaskIntoConstraints="NO" id="coj-E1-Luk">
+                    <rect key="frame" x="0.0" y="-378" width="320" height="422"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="422" id="h7r-Ds-52a"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tableview_pull_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="F2q-I2-OGI">
+                    <rect key="frame" x="96" y="6" width="32" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Fbl-Zl-0H2">
+                    <rect key="frame" x="102" y="12" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="下拉开始刷新..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xlu-Xs-FQC">
+                    <rect key="frame" x="136" y="15" width="85" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="coj-E1-Luk" firstAttribute="trailing" secondItem="tGv-n9-ZvR" secondAttribute="trailing" id="9H7-ZU-bEB"/>
+                <constraint firstItem="coj-E1-Luk" firstAttribute="bottom" secondItem="tGv-n9-ZvR" secondAttribute="bottom" id="GDp-bJ-fPB"/>
+                <constraint firstItem="coj-E1-Luk" firstAttribute="leading" secondItem="tGv-n9-ZvR" secondAttribute="leading" id="fXr-eg-Sfm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="tGv-n9-ZvR"/>
+            <connections>
+                <outlet property="imageV_icon" destination="F2q-I2-OGI" id="gVy-55-LWx"/>
+                <outlet property="indicator" destination="Fbl-Zl-0H2" id="bP8-8G-XbZ"/>
+                <outlet property="label_tipText" destination="Xlu-Xs-FQC" id="7Ge-84-baE"/>
+            </connections>
+            <point key="canvasLocation" x="-14.4" y="-29.685157421289357"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="refreshbg" width="320" height="438"/>
+        <image name="tableview_pull_refresh" width="32" height="32"/>
+    </resources>
+</document>

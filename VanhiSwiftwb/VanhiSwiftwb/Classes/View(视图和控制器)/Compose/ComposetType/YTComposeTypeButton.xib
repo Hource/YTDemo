@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YTComposeTypeButton" customModule="VanhiSwiftwb" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v1R-Lu-9Wb">
+                    <rect key="frame" x="14.5" y="0.0" width="71" height="71"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="71" id="XX0-UU-Sws"/>
+                        <constraint firstAttribute="height" constant="71" id="kic-eq-Td5"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发说说" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k12-Zm-Chi">
+                    <rect key="frame" x="0.0" y="71" width="100" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="k12-Zm-Chi" firstAttribute="top" secondItem="v1R-Lu-9Wb" secondAttribute="bottom" id="8oq-u5-9FV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="k12-Zm-Chi" secondAttribute="bottom" id="Bde-Rr-Syr"/>
+                <constraint firstItem="v1R-Lu-9Wb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Zz3-Ih-zcN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="k12-Zm-Chi" secondAttribute="trailing" id="d05-PN-H5T"/>
+                <constraint firstItem="k12-Zm-Chi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sBn-3B-eWZ"/>
+                <constraint firstItem="v1R-Lu-9Wb" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="x7p-Li-ahk"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageV_icon" destination="v1R-Lu-9Wb" id="fXI-sr-o58"/>
+                <outlet property="label_describle" destination="k12-Zm-Chi" id="yPE-iM-aCi"/>
+            </connections>
+            <point key="canvasLocation" x="129.59999999999999" y="153.82308845577214"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YTEmoticonInputView" customModule="VanhiSwiftwb" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YTEmoticonInputView" customModule="VanhiSwiftwb" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="253"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bAc-Ya-18I">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="213"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aaf-5F-hQs" customClass="YTEmoticonLayout" customModule="VanhiSwiftwb" customModuleProvider="target">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="znm-ge-A1u"/>
+                        <outlet property="delegate" destination="-1" id="4sV-51-prq"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-fx-pGw" customClass="YTEmoticonToolBar" customModule="VanhiSwiftwb" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="213" width="320" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="F5U-eC-PCC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bAc-Ya-18I" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="58B-CA-Qba"/>
+                <constraint firstItem="Pzs-fx-pGw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7dy-aL-XIQ"/>
+                <constraint firstItem="Pzs-fx-pGw" firstAttribute="top" secondItem="bAc-Ya-18I" secondAttribute="bottom" id="Wve-g9-Ard"/>
+                <constraint firstItem="bAc-Ya-18I" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cRD-1V-Xvt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Pzs-fx-pGw" secondAttribute="bottom" id="rcf-WO-Jhy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bAc-Ya-18I" secondAttribute="trailing" id="xdf-04-Leg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pzs-fx-pGw" secondAttribute="trailing" id="zPo-IP-ZIJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="bAc-Ya-18I" id="3u3-Ps-QB4"/>
+                <outlet property="emoticonToolBar" destination="Pzs-fx-pGw" id="89S-d9-BoL"/>
+            </connections>
+            <point key="canvasLocation" x="-26" y="120"/>
+        </view>
+    </objects>
+</document>
